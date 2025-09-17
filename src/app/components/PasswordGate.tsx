@@ -47,7 +47,7 @@ export default function PasswordGate({
   if (isLoading) {
     return (
       <div className="password-gate">
-        <div className="container text-center">Loading...</div>
+        <div className="container text-center"></div>
       </div>
     );
   }
