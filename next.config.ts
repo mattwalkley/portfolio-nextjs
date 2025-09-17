@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   output: "export",
   distDir: "docs",
   trailingSlash: true,
-  assetPrefix: "",
+  assetPrefix: "/docs",
   images: {
     unoptimized: true,
   },
