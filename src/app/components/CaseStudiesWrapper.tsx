@@ -1,18 +1,16 @@
-'use client';
+"use client";
 
-import PasswordGate from './PasswordGate';
+import PasswordGate from "./PasswordGate";
 
 interface CaseStudiesWrapperProps {
   children: React.ReactNode;
 }
 
-export default function CaseStudiesWrapper({ children }: CaseStudiesWrapperProps) {
+export default function CaseStudiesWrapper({
+  children,
+}: CaseStudiesWrapperProps) {
   // Simple password - you can change this to whatever you want
-  const PASSWORD = 'portfolio2024';
+  const PASSWORD = "portfolio2025";
 
-  return (
-    <PasswordGate password={PASSWORD}>
-      {children}
-    </PasswordGate>
-  );
+  return <PasswordGate password={PASSWORD}>{children}</PasswordGate>;
 }

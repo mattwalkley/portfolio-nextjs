@@ -191,11 +191,6 @@ a {
   transition: all var(--transition-normal);
 }
 
-.grid-block:hover {
-  border-color: var(--color-link);
-  box-shadow: 0 0 0 4px rgba(0, 235, 248, 0.2);
-}
-
 .grid-item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding: var(--spacing-sm) 0;
@@ -288,6 +283,10 @@ a {
   font-size: var(--font-size-sm);
   color: var(--color-gray);
   margin-top: var(--spacing-xs);
+  text-align: center;
+}
+
+.text-center {
   text-align: center;
 }
 
@@ -1579,7 +1578,12 @@ img.case-study-image {
 
 /* Password Gate Styles */
 .password-gate {
-  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1588,6 +1592,7 @@ img.case-study-image {
 }
 
 .password-form {
+  margin: 0 auto;
   max-width: 400px;
   width: 100%;
   text-align: center;

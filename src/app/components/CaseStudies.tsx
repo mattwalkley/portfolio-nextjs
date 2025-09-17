@@ -7,8 +7,7 @@ const caseStudies = [
     description:
       "How I redesigned a construction finance product's fragmented draw workflows into a unified, scalable system that improved efficiency across all loan types",
     image: "/img-draw-desk-cover.png",
-    figmaLink: "/case-studies/draw-management",
-    password: "portfolio2024",
+    link: "/case-studies/draw-management",
   },
   {
     id: 1,
@@ -16,7 +15,7 @@ const caseStudies = [
     description:
       "Designed an intuitive budget tracking system for portfolio management, featuring hierarchical cost categorization and real-time financial insights",
     image: "/img-draw-desk-cover.png",
-    figmaLink: "https://figma.com/file/budget-interface",
+    link: "https://figma.com/file/budget-interface",
     password: "portfolio2024",
   },
 ];
@@ -35,14 +34,9 @@ export default function CaseStudies() {
 
   const caseStudyCover = (study: any) => {
     return (
-      <a href={study.figmaLink} key={study.id} className="case-study-cover">
+      <a href={study.link} key={study.id} className="case-study-cover">
         <div className="image-block">
           <img src={study.image} alt={study.title} style={imageStyles} />
-          {study.password && (
-            <div className="password-indicator">
-              🔒 Password Protected
-            </div>
-          )}
         </div>
         <div className="case-study-content">
           <h3 className="text-base">{study.title}</h3>
