@@ -38,6 +38,11 @@ export default function CaseStudies() {
       <a href={study.figmaLink} key={study.id} className="case-study-cover">
         <div className="image-block">
           <img src={study.image} alt={study.title} style={imageStyles} />
+          {study.password && (
+            <div className="password-indicator">
+              🔒 Password Protected
+            </div>
+          )}
         </div>
         <div className="case-study-content">
           <h3 className="text-base">{study.title}</h3>

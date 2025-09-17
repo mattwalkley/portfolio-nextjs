@@ -2,11 +2,13 @@ import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
 import Grid from "@/app/components/Grid";
 import GridBlock from "@/app/components/GridBlock";
+import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
 
 export default function DrawManagement() {
   return (
-    <div className="page">
-      <Navigation />
+    <CaseStudiesWrapper>
+      <div className="page">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="hero my-lg">
@@ -403,6 +405,7 @@ export default function DrawManagement() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </CaseStudiesWrapper>
   );
 }

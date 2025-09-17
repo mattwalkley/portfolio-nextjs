@@ -1576,3 +1576,111 @@ img.case-study-image {
     gap: var(--spacing-4xl);
   }
 }
+
+/* Password Gate Styles */
+.password-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-dark);
+  padding: var(--spacing-lg);
+}
+
+.password-form {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.password-input-form {
+  margin-top: var(--spacing-lg);
+}
+
+.input-group {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.password-input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+  background: var(--color-darker);
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: var(--color-link);
+}
+
+.password-input::placeholder {
+  color: var(--color-gray);
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+}
+
+.btn-outline:hover {
+  background: var(--color-gray);
+  color: var(--color-dark);
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.password-gate-header {
+  background: var(--color-darker);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-indicator {
+  color: var(--color-link);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.loading {
+  color: var(--color-gray);
+  font-size: var(--font-size-lg);
+}
+
+.password-indicator {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+.image-block {
+  position: relative;
+}
