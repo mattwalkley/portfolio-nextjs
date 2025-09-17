@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Site
+
+A modern, professional portfolio website built with Next.js 15, designed for product designers and design leaders. Features a clean black/white/gray design aesthetic with slate undertones and fun CMYK squiggle hover animations.
+
+## Features
+
+- **Home Page**: Introduction, about information, services, and portfolio teaser
+- **Portfolio Page**: Grid layout showcasing case studies with Figma links and password protection
+- **Writing Page**: Blog area for thought leadership content with category filtering
+- **Responsive Design**: Mobile-first approach with responsive grid layouts
+- **Modern Animations**: Fun CMYK squiggle hover effects on buttons
+- **Professional Aesthetic**: Clean, sophisticated design perfect for design professionals
+
+## Design System
+
+- **Colors**: Black/white/gray palette with slate undertones
+- **Typography**: Inter font family for clean, readable text
+- **Spacing**: Consistent spacing system using CSS custom properties
+- **Animations**: Smooth transitions and hover effects
+- **Buttons**: Black buttons with white text, featuring CMYK squiggle hover animations
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: CSS with custom properties and utility classes
+- **Fonts**: Inter from Google Fonts
+- **Deployment**: Ready for Vercel deployment
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── Navigation.tsx
+│   │   └── Footer.tsx
+│   ├── portfolio/
+│   │   └── page.tsx
+│   ├── writing/
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Colors
+Update the color palette in `globals.css` by modifying the CSS custom properties in the `:root` selector.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Content
+- Update case studies in `src/app/portfolio/page.tsx`
+- Modify blog posts in `src/app/writing/page.tsx`
+- Edit personal information in `src/app/page.tsx`
 
-## Learn More
+### Styling
+The design system uses utility classes and CSS custom properties. Modify `globals.css` to adjust spacing, typography, and other design tokens.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is optimized for Vercel deployment:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with zero configuration
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - feel free to use this template for your own portfolio.
