@@ -158,6 +158,121 @@ a {
   transform: scaleX(1);
 }
 
+/* Mobile Navigation */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  z-index: 1001;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 18px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 1px;
+  transition: all var(--transition-normal);
+  transform-origin: center;
+}
+
+.hamburger span:nth-child(1) {
+  position: absolute;
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-dark);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  padding-top: 80px;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+.mobile-nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  padding: var(--spacing-sm);
+  transition: color var(--transition-normal);
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-link);
+}
+
+.btn-mobile {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+}
+
+/* Hide desktop nav on mobile */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .nav-content {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
