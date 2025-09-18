@@ -18,7 +18,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     "idle" | "success" | "error"
   >("idle");
 
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
