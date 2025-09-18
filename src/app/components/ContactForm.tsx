@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -17,6 +17,35 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
+  const nameInputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-focus first input when form opens
+  useEffect(() => {
+    if (isOpen && nameInputRef.current) {
+      // Small delay to ensure the modal is fully rendered
+      setTimeout(() => {
+        nameInputRef.current?.focus();
+      }, 100);
+    }
+  }, [isOpen]);
+
+  // Handle escape key to close form
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [isOpen, onClose]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -89,6 +118,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 Name
               </label>
               <input
+                ref={nameInputRef}
                 type="text"
                 id="name"
                 name="name"
