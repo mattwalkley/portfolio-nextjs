@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ContactForm from "./ContactForm";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,21 +22,25 @@ export default function Navigation() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
-      if (isMobileMenuOpen && !target.closest('.mobile-nav') && !target.closest('.mobile-menu-button')) {
+      if (
+        isMobileMenuOpen &&
+        !target.closest(".mobile-nav") &&
+        !target.closest(".mobile-menu-button")
+      ) {
         closeMobileMenu();
       }
     };
 
     if (isMobileMenuOpen) {
-      document.addEventListener('click', handleClickOutside);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("click", handleClickOutside);
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.removeEventListener('click', handleClickOutside);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("click", handleClickOutside);
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
@@ -46,6 +52,15 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const openContactForm = () => {
+    setIsContactFormOpen(true);
+    setIsMobileMenuOpen(false); // Close mobile menu if open
+  };
+
+  const closeContactForm = () => {
+    setIsContactFormOpen(false);
+  };
+
   return (
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-content">
@@ -53,7 +68,7 @@ export default function Navigation() {
         <Link href="/" className="nav-logo" onClick={closeMobileMenu}>
           <svg
             width="auto"
-            height="28"
+            height="24"
             viewBox="0 0 68 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -84,9 +99,9 @@ export default function Navigation() {
           <Link href="/" className="nav-link">
             Resume
           </Link>
-          <a href="mailto:matthew.walkley@gmail.com" className="btn btn-nav">
+          <button onClick={openContactForm} className="btn btn-nav">
             Let's connect
-          </a>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -114,22 +129,20 @@ export default function Navigation() {
           >
             LinkedIn
           </Link>
-          <Link
-            href="/"
-            className="mobile-nav-link"
-            onClick={closeMobileMenu}
-          >
+          <Link href="/" className="mobile-nav-link" onClick={closeMobileMenu}>
             Resume
           </Link>
-          <a
-            href="mailto:matthew.walkley@gmail.com"
+          <button
+            onClick={openContactForm}
             className="btn btn-mobile"
-            onClick={closeMobileMenu}
           >
             Let's connect
-          </a>
+          </button>
         </div>
       </div>
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactFormOpen} onClose={closeContactForm} />
     </nav>
   );
 }

@@ -48,7 +48,7 @@ export default function WhatIDo() {
     <section className="section">
       <div className="container">
         <h2 className="text-xl text-white my-lg">
-          Things I do and love to work on
+          Areas of focus and expertise
         </h2>
         <Grid templateColumns="1fr 1fr" gap="md">
           {skills.map((skill) => (

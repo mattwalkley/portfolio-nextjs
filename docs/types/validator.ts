@@ -36,10 +36,28 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
+// Validate ../../src/app/case-studies/design-system/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/case-studies/design-system/page.js")
+  handler satisfies AppPageConfig<"/case-studies/design-system">
+}
+
 // Validate ../../src/app/case-studies/draw-management/page.tsx
 {
   const handler = {} as typeof import("../../src/app/case-studies/draw-management/page.js")
   handler satisfies AppPageConfig<"/case-studies/draw-management">
+}
+
+// Validate ../../src/app/case-studies/enterprise-replatform/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/case-studies/enterprise-replatform/page.js")
+  handler satisfies AppPageConfig<"/case-studies/enterprise-replatform">
+}
+
+// Validate ../../src/app/case-studies/miscellaneous/page.tsx
+{
+  const handler = {} as typeof import("../../src/app/case-studies/miscellaneous/page.js")
+  handler satisfies AppPageConfig<"/case-studies/miscellaneous">
 }
 
 // Validate ../../src/app/page.tsx
