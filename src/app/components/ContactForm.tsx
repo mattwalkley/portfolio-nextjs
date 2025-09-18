@@ -14,9 +14,14 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -30,7 +35,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
     try {
       // Replace 'YOUR_FORM_ID' with your actual Formspree form ID
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/xwpngkgk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -124,7 +129,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 required
                 rows={5}
                 className="form-textarea"
-                placeholder="Tell me about your project or just say hello!"
+                placeholder="Let me know how I can help your team or project! 💼"
               />
             </div>
 

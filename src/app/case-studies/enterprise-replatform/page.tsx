@@ -41,7 +41,7 @@ export default function DrawManagement() {
           </div>
           <div className="container container--wide my-xl">
             <img
-              src="/img-draw-desk-detail-panel.png"
+              src="/img-deal-overview.png"
               alt="Draw Desk Interface"
               className="case-study-image"
             />

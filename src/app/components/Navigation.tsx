@@ -33,16 +33,28 @@ export default function Navigation() {
 
     if (isMobileMenuOpen) {
       document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  // Handle body scroll locking for both mobile menu and contact form
+  useEffect(() => {
+    if (isMobileMenuOpen || isContactFormOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
     }
 
+    // Cleanup on unmount
     return () => {
-      document.removeEventListener("click", handleClickOutside);
       document.body.style.overflow = "unset";
     };
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, isContactFormOpen]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -132,10 +144,7 @@ export default function Navigation() {
           <Link href="/" className="mobile-nav-link" onClick={closeMobileMenu}>
             Resume
           </Link>
-          <button
-            onClick={openContactForm}
-            className="btn btn-mobile"
-          >
+          <button onClick={openContactForm} className="btn btn-mobile">
             Let's connect
           </button>
         </div>

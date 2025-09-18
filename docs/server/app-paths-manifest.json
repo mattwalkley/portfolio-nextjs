@@ -1,7 +1,0 @@
-{
-  "/case-studies/draw-management/page": "app/case-studies/draw-management/page.js",
-  "/case-studies/miscellaneous/page": "app/case-studies/miscellaneous/page.js",
-  "/case-studies/enterprise-replatform/page": "app/case-studies/enterprise-replatform/page.js",
-  "/page": "app/page.js",
-  "/case-studies/design-system/page": "app/case-studies/design-system/page.js"
-}
