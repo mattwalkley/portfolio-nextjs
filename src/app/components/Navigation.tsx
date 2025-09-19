@@ -6,7 +6,6 @@ import ContactForm from "./ContactForm";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   useEffect(() => {
@@ -19,35 +18,12 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle body scroll locking for contact form
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element;
-      if (
-        isMobileMenuOpen &&
-        !target.closest(".mobile-nav") &&
-        !target.closest(".mobile-menu-button")
-      ) {
-        closeMobileMenu();
-      }
-    };
-
-    if (isMobileMenuOpen) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isMobileMenuOpen]);
-
-  // Handle body scroll locking for both mobile menu and contact form
-  useEffect(() => {
-    if (isMobileMenuOpen || isContactFormOpen) {
+    if (isContactFormOpen) {
       // Store the current scroll position
       const scrollY = window.scrollY;
-      
+
       // Apply scroll lock styles
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
@@ -60,7 +36,7 @@ export default function Navigation() {
       document.body.style.top = "";
       document.body.style.width = "";
       document.body.style.overflow = "";
-      
+
       // Restore scroll position
       if (scrollY) {
         window.scrollTo(0, parseInt(scrollY || "0") * -1);
@@ -74,19 +50,10 @@ export default function Navigation() {
       document.body.style.width = "";
       document.body.style.overflow = "";
     };
-  }, [isMobileMenuOpen, isContactFormOpen]);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  }, [isContactFormOpen]);
 
   const openContactForm = () => {
     setIsContactFormOpen(true);
-    setIsMobileMenuOpen(false); // Close mobile menu if open
   };
 
   const closeContactForm = () => {
@@ -97,7 +64,7 @@ export default function Navigation() {
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-content">
         {/* Logo and Name */}
-        <Link href="/" className="nav-logo" onClick={closeMobileMenu}>
+        <Link href="/" className="nav-logo">
           <svg
             width="auto"
             height="24"
@@ -119,52 +86,86 @@ export default function Navigation() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="nav-links desktop-nav">
+        {/* Navigation Links */}
+        <div className="nav-links">
           <Link
             href="https://linkedin.com/in/matt-walkley/"
             target="_blank"
-            className="nav-link"
+            className="nav-icon-link"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile"
           >
-            LinkedIn
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                fill="currentColor"
+              />
+            </svg>
           </Link>
-          <Link href="/" className="nav-link">
-            Resume
-          </Link>
+          <a
+            href="/Matt-Walkley-Resume.pdf"
+            target="_blank"
+            className="nav-icon-link"
+            aria-label="Download Resume"
+            title="Download Resume"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <polyline
+                points="14,2 14,8 20,8"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <line
+                x1="16"
+                y1="13"
+                x2="8"
+                y2="13"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <line
+                x1="16"
+                y1="17"
+                x2="8"
+                y2="17"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <polyline
+                points="10,9 9,9 8,9"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
           <button onClick={openContactForm} className="btn btn-nav">
-            Let's connect
-          </button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="mobile-menu-button"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <span className={`hamburger ${isMobileMenuOpen ? "open" : ""}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      <div className={`mobile-nav ${isMobileMenuOpen ? "open" : ""}`}>
-        <div className="mobile-nav-content">
-          <Link
-            href="https://linkedin.com/in/matt-walkley/"
-            target="_blank"
-            className="mobile-nav-link"
-            onClick={closeMobileMenu}
-          >
-            LinkedIn
-          </Link>
-          <Link href="/" className="mobile-nav-link" onClick={closeMobileMenu}>
-            Resume
-          </Link>
-          <button onClick={openContactForm} className="btn btn-mobile">
             Let's connect
           </button>
         </div>

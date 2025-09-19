@@ -19,32 +19,34 @@ export default function DrawManagement() {
               workflows into a unified, scalable system that improved efficiency
               across all loan types
             </p>
-            <div className="separator my-lg"></div>
-            <Grid templateColumns="1fr 1fr" gap="md" className="mt-lg mb-xl">
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Company</dt>
-                <dd>Built Technologies</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Role</dt>
-                <dd>Product Design Lead</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Product</dt>
-                <dd>Construction Loan Administration</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Dates</dt>
-                <dd>2021-2022</dd>
-              </div>
-            </Grid>
-          </div>
-          <div className="container container--wide my-xl">
-            <img
-              src="/img-draw-desk-detail-panel.png"
-              alt="Draw Desk Interface"
-              className="case-study-image"
-            />
+            <div className="container container--highlight my-md">
+              <Grid templateColumns="1fr 1fr" gap="md">
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Company</dt>
+                  <dd>
+                    <a
+                      href="https://getbuilt.com"
+                      target="_blank"
+                      className="text-link"
+                    >
+                      Built Technologies
+                    </a>
+                  </dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Role</dt>
+                  <dd>Product Design Lead</dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Product</dt>
+                  <dd>Construction Loan Administration</dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Dates</dt>
+                  <dd>2021-2022</dd>
+                </div>
+              </Grid>
+            </div>
           </div>
         </section>
 
@@ -54,51 +56,11 @@ export default function DrawManagement() {
             <h2 className="text-3xl">The challenge</h2>
             <p className="text-gray my-md">
               In 2021, I led discovery sessions with lenders to dig into one of
-              the most critical pain points in our platform: draw
-              management&mdash;the process of disbursing funds from a loan. This
-              was the heartbeat of our product and the clearest way customers
-              measured ROI.
+              the most critical pain points in our platform:{" "}
+              <strong>draw management</strong>&mdash;the process of disbursing
+              funds from a loan. This was the heartbeat of our product and the
+              clearest way customers measured ROI.
             </p>
-            <p className="text-gray my-md">
-              The conversations surfaced clear themes, which defined the
-              challenges we set out to solve.
-            </p>
-            <Grid templateColumns="1fr 1fr" gap="md">
-              <GridBlock
-                title="Too many experiences"
-                description="There were simply too many manifestations of draw management within the product. This spawned from the fact that we were supporting multiple lines of business with different workflows and requirements."
-              />
-              <GridBlock
-                title="Inefficient queues"
-                description="Lenders were frustrated with the inefficient queues they were forced to navigate. They wanted to be able to process stale draws first or see those missing external vendor documents."
-              />
-              <GridBlock
-                title="Transparency gaps"
-                description="Lenders needed to quickly confirm where funds were going and see inspection context without drilling into every loan"
-              />
-              <GridBlock
-                title="Customization needs"
-                description="Many emphasized their 'secret sauce' processes and wanted flexibility to filter, sort, and see their data in a way that made sense for them."
-              />
-            </Grid>
-          </div>
-          <div className="container container--wide">
-            <div className="case-study-image-block my-xl">
-              <img
-                src="/img-draw-experiences.png"
-                className="case-study-image"
-                alt="Legacy draw experiences in the construction loan administration product"
-              />
-              <div className="container">
-                <p className="text-caption text-gray">
-                  Assorted screenshots of the multiple draw experiences for
-                  different lines of business, each with their own set of
-                  features and workflows. This was a major pain point for
-                  lenders as they had to navigate between multiple experiences
-                  to get the information they needed.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -108,10 +70,66 @@ export default function DrawManagement() {
             <div className="separator my-xl"></div>
             <h2 className="text-3xl mb-sm">Identifying the problem</h2>
             <p className="text-gray mb-md">
-              The patterns made the pain impossible to ignore. Lenders weren't
-              simply inconvenienced—they were blocked from doing their core job
-              efficiently. We captured these frustrations in a problem statement
-              to align the team and chart a path forward.
+              Over the course of six months, we conducted 20+ discovery calls to
+              deeply understand the pain points lenders faced. These
+              conversations revealed that lenders weren't just
+              inconvenienced—they were often blocked from doing their core job
+              efficiently.
+            </p>
+            <p className="text-gray my-md">
+              Through this extensive discovery process, we identified recurring
+              themes that defined the challenges we needed to address.
+            </p>
+            {/* Moved the grid block content into the bulleted list below */}
+          </div>
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="lg">
+              <div>
+                <p className="text-sm text-gray mb-md">
+                  <strong>Too many experiences</strong>
+                  <br />
+                  There were simply too many manifestations of draw management
+                  within the product. This spawned from the fact that we were
+                  supporting multiple lines of business with different workflows
+                  and requirements.
+                </p>
+                <p className="text-sm text-gray my-md">
+                  <strong>Inefficient queues</strong>
+                  <br />
+                  Lenders were frustrated with the inefficient queues they were
+                  forced to navigate. They wanted to be able to process stale
+                  draws first or see those missing external vendor documents.
+                </p>
+
+                <p className="text-sm text-gray my-md">
+                  <strong>Customization needs</strong>
+                  <br />
+                  Many emphasized their 'secret sauce' processes and wanted
+                  flexibility to filter, sort, and see their data in a way that
+                  made sense for them.
+                </p>
+              </div>
+
+              <div className="case-study-image-block">
+                <img
+                  src="/img-draw-experiences.png"
+                  className="case-study-image"
+                  alt="Legacy draw experiences in the construction loan administration product"
+                />
+                <p className="text-caption text-gray">
+                  Assorted screenshots of the multiple draw experiences for
+                  different lines of business, each with their own set of
+                  features and workflows. This was a major pain point for
+                  lenders as they had to navigate between multiple experiences
+                  to get the information they needed.
+                </p>
+              </div>
+            </Grid>
+          </div>
+          <div className="container">
+            <p className="text-gray my-md">
+              We distilled these frustrations into a clear problem statement to
+              align the team and guide our next steps.
             </p>
             <Grid templateColumns="1fr" gap="md">
               <GridBlock
@@ -125,25 +143,26 @@ export default function DrawManagement() {
                 description="If we create a centralized hub for draws, we can abstract away product-specific complexity and unify lenders into a single streamlined workflow. This will allow them to move faster through their queues, improve draw turnaround times, and accelerate capital deployment, which increases earned interest across their portfolios."
               />
             </Grid>
-            <h2 className="text-xl mt-xl my-md">Additional goals</h2>
-            <Grid templateColumns="1fr 1fr" gap="md">
-              <GridBlock
-                title="Reduce information architecture complexity"
-                description="Collapse multiple legacy pages (segmented by draw status) into a single centralized hub with status filters, reducing context-switching and surfacing the full picture."
-              />
-              <GridBlock
-                title="Simplify onboarding &amp; training"
-                description="Provide one consistent interface across loan products, reducing ramp-up time for new users."
-              />
-              <GridBlock
-                title="Address diverse lender needs at scale"
-                description="Lenders rely on unique “secret sauce” processes, which previously forced bespoke feature requests. The goal was to introduce customization tools that let them solve their own problems."
-              />
-              <GridBlock
-                title="Increase developer velocity, efficiency, and delight"
-                description="Deliver Built's first React frontend, modernizing the stack and deprecating redundant pages, which lowered bug risk and freed up engineering time."
-              />
-            </Grid>
+            <h2 className="text-lg mt-lg mb-xs">Additional goals</h2>
+            <p className="text-gray">
+              In addition to solving the core workflow problems, we set out to
+              achieve several supporting goals to improve the experience for
+              both lenders and our internal teams:
+            </p>
+            <ul className="list-bullets text-gray text-base my-md">
+              <li>
+                <strong>Reduce information architecture complexity</strong>
+              </li>
+              <li>
+                <strong>Simplify onboarding &amp; training</strong>
+              </li>
+              <li>
+                <strong>Address diverse lender needs at scale</strong>
+              </li>
+              <li>
+                <strong>Increase developer velocity and efficiency</strong>
+              </li>
+            </ul>
             <div className="separator my-xl"></div>
           </div>
         </section>
@@ -199,7 +218,7 @@ export default function DrawManagement() {
                   "Transferred" or "Archived".
                 </p>
               </div>
-              <div>
+              <Grid templateColumns="1fr" gap="lg">
                 <div className="case-study-image-block mb-lg">
                   <img
                     src="/img-draw-desk.png"
@@ -207,54 +226,18 @@ export default function DrawManagement() {
                     className="case-study-image"
                   />
                 </div>
-                <Grid templateColumns="1fr 1fr" gap="lg">
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-detail-panel.png"
-                      alt="Details panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The draw card detail panel appears when a draw is
-                      selected. It contains the draw's details, actions, and
-                      context.
-                    </p>
-                  </div>
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-columns.png"
-                      alt="Columns panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The columns menu allows lenders to customize the columns
-                      that are displayed in the Draw Desk.
-                    </p>
-                  </div>
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-filters.png"
-                      alt="Filters panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The filters panel allows lenders to filter draws on any
-                      column.
-                    </p>
-                  </div>
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-bulk-actions.png"
-                      alt="Bulk actions panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The bulk actions panel allows lenders to perform bulk
-                      actions on the current selection of draws.
-                    </p>
-                  </div>
-                </Grid>
-              </div>
+                <div className="case-study-image-block">
+                  <img
+                    src="/img-draw-desk-panel.png"
+                    alt="Draw Desk panels"
+                    className="case-study-image"
+                  />
+                  <p className="text-caption text-gray">
+                    Dynamic side panels that appear when draws are selected,
+                    filters are applied, or columns are sorted.
+                  </p>
+                </div>
+              </Grid>
             </Grid>
           </div>
 

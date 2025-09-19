@@ -9,8 +9,7 @@ interface CaseStudiesWrapperProps {
 export default function CaseStudiesWrapper({
   children,
 }: CaseStudiesWrapperProps) {
-  // Simple password - you can change this to whatever you want
-  const PASSWORD = "portfolio2025";
+  const PASSWORD = "opensesame";
 
   return <PasswordGate password={PASSWORD}>{children}</PasswordGate>;
 }

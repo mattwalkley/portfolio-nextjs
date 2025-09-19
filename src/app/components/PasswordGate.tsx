@@ -19,19 +19,22 @@ export default function PasswordGate({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is already authenticated
-    const savedAuth = localStorage.getItem("case-studies-auth");
-    if (savedAuth === "true") {
+    // Check if user is already authenticated with correct password
+    const savedPassword = localStorage.getItem("case-studies-password");
+    if (savedPassword === password) {
       setIsAuthenticated(true);
+    } else {
+      // Clear invalid stored password
+      localStorage.removeItem("case-studies-password");
     }
     setIsLoading(false);
-  }, []);
+  }, [password]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputPassword === password) {
       setIsAuthenticated(true);
-      localStorage.setItem("case-studies-auth", "true");
+      localStorage.setItem("case-studies-password", password);
       onSuccess?.();
       setError("");
     } else {
@@ -41,7 +44,7 @@ export default function PasswordGate({
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    localStorage.removeItem("case-studies-auth");
+    localStorage.removeItem("case-studies-password");
   };
 
   if (isLoading) {

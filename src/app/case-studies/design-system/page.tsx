@@ -18,33 +18,34 @@ export default function DrawManagement() {
               How I led the creation of a design system—hiring the team, driving
               buy-in, and contributing from implementation to adoption
             </p>
-            <div className="separator my-lg"></div>
-            <Grid templateColumns="1fr 1fr" gap="md" className="mt-lg mb-xl">
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Company</dt>
-                <dd>
-                  <a
-                    href="https://getbuilt.com"
-                    target="_blank"
-                    className="text-link"
-                  >
-                    Built Technologies
-                  </a>
-                </dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Role</dt>
-                <dd>Director, Product Design</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Product</dt>
-                <dd>All Built products on the React stack</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Dates</dt>
-                <dd>2023-2024</dd>
-              </div>
-            </Grid>
+            <div className="container container--highlight my-md">
+              <Grid templateColumns="1fr 1fr" gap="md">
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Company</dt>
+                  <dd>
+                    <a
+                      href="https://getbuilt.com"
+                      target="_blank"
+                      className="text-link"
+                    >
+                      Built Technologies
+                    </a>
+                  </dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Role</dt>
+                  <dd>Director, Product Design</dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Product</dt>
+                  <dd>All Built products on the React stack</dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Dates</dt>
+                  <dd>2023-2024</dd>
+                </div>
+              </Grid>
+            </div>
           </div>
         </section>
 
@@ -53,33 +54,22 @@ export default function DrawManagement() {
           <div className="container">
             <h2 className="text-3xl">The challenge</h2>
             <p className="text-gray my-md">
-              Built was growing quickly, and we had just started building out a
-              suite of products on the React stack. While our designs in Figma
-              looked consistent, those components didn’t map 1:1 with React.
-              There was no dedicated team to own a design system, and our
-              implementation was a mix of internal and external tools. For many
-              engineers React was still new, and best practices weren’t always
-              followed.
+              As Built rapidly expanded its React product suite, we faced a
+              growing disconnect between our polished Figma designs and their
+              real-world implementation. Without a dedicated design system team,
+              our component library was a patchwork of internal and external
+              tools—community-driven, lacking standards, and functioning more as
+              an engineering utility than a purposeful, scalable system. For
+              many engineers, React was still new, and best practices were
+              inconsistently applied.
             </p>
             <p className="text-gray my-md">
-              We did have a shared component library, but it was
-              community-driven and lacked standards. It functioned more like an
-              engineering utility library than a true design system led by
-              design, patterned with purpose, and built to scale.
-            </p>
-            <p className="text-gray my-md">
-              This created real product problems: accessibility gaps,
-              inconsistent implementations from page to page, style conflicts,
-              and no standard for common interactions like modals or popovers.
-              The system also lacked animation and “life,” which limited the
-              sense of cohesion across the product.
-            </p>
-            <p className="text-gray my-md">
-              Even core components like grids were built as one-offs, each with
-              its own customizations. This created user friction because grid
-              behavior varied depending on where you were in the app, and it
-              increased engineering costs as teams had to maintain and extend
-              multiple versions separately.
+              This led to tangible product issues: accessibility gaps,
+              inconsistent UI patterns, style conflicts, and no standard for
+              common interactions like modals or popovers. Even fundamental
+              elements like grids were built as isolated one-offs, resulting in
+              varied user experiences and increased engineering overhead as
+              teams maintained multiple custom versions.
             </p>
             <div className="separator my-2xl"></div>
             <h2 className="text-3xl mb-sm">Identifying the problem</h2>

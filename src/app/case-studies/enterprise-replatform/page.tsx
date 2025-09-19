@@ -13,38 +13,40 @@ export default function DrawManagement() {
         {/* Hero Section */}
         <section className="hero my-lg">
           <div className="container mt-xl">
-            <h1 className="text-5xl mb-sm">Enterprise Re-Platform</h1>
+            <h1 className="text-5xl mb-sm">Enterprise Platform Redesign</h1>
             <p className="text-xl text-gray-300">
-              How I led the design of Built's flagship CRE lending product
-              re-platform, transforming a legacy system into a modern, scalable
-              platform
+              How I led the transformation of Built's flagship CRE lending
+              product—redesigning and replatforming a legacy system into a
+              modern, scalable solution.
             </p>
-            <div className="separator my-lg"></div>
-            <Grid templateColumns="1fr 1fr" gap="md" className="mt-lg mb-xl">
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Company</dt>
-                <dd>Built Technologies</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Role</dt>
-                <dd>Product Design Lead</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Product</dt>
-                <dd>Construction Loan Administration</dd>
-              </div>
-              <div className="detail-row">
-                <dt className="text-xs text-gray text-uppercase">Dates</dt>
-                <dd>2024-Present</dd>
-              </div>
-            </Grid>
-          </div>
-          <div className="container container--wide my-xl">
-            <img
-              src="/img-deal-overview.png"
-              alt="Draw Desk Interface"
-              className="case-study-image"
-            />
+            <div className="container container--highlight my-m">
+              <Grid templateColumns="1fr 1fr" gap="md">
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Company</dt>
+                  <dd>
+                    <a
+                      href="https://getbuilt.com"
+                      target="_blank"
+                      className="text-link"
+                    >
+                      Built Technologies
+                    </a>
+                  </dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Role</dt>
+                  <dd>Product Design Lead</dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Product</dt>
+                  <dd>Construction Loan Administration</dd>
+                </div>
+                <div className="detail-row">
+                  <dt className="text-xs text-gray text-uppercase">Dates</dt>
+                  <dd>2024-Present</dd>
+                </div>
+              </Grid>
+            </div>
           </div>
         </section>
 
@@ -53,32 +55,21 @@ export default function DrawManagement() {
           <div className="container">
             <h2 className="text-3xl">The challenge</h2>
             <p className="text-gray my-md">
-              By 2020, Built had proven product–market fit in consumer and
-              homebuilder lending. Those products worked well for smaller loans
-              and simpler workflows, but the company's growth ambitions were
-              moving upmarket into commercial real estate. That's where the
-              cracks started to show.
+              By 2023, Built had achieved product-market fit in consumer and
+              homebuilder lending, but as the company set its sights on
+              commercial real estate, the limitations of the existing platform
+              became clear. What worked for smaller, simpler loans couldn't keep
+              up with the scale, complexity, and volume of enterprise CRE
+              deals—workflows became increasingly complicated, and the system
+              began to strain.
             </p>
-
             <p className="text-gray my-md">
-              What worked for consumer and homebuilder loans wasn't going to cut
-              it for enterprise CRE. The size of the deals, the number of
-              records being managed, and the complexity of workflows were far
-              beyond what the existing platform could handle.
-            </p>
-
-            <p className="text-gray my-md">
-              The technology itself was outdated, and each attempt to extend it
-              only introduced more fragility. Just as important, the
-              fundamentals enterprise clients expected—robust roles and
-              permissions, configurable workflows, and compliance-ready
-              controls—were missing.
-            </p>
-
-            <p className="text-gray my-md">
-              To compete in CRE and serve larger, more sophisticated lenders,
-              Built needed more than incremental fixes. The challenge was clear:
-              replatform the flagship product to handle enterprise scale.
+              The technology was outdated and increasingly fragile, and the core
+              features enterprise clients expected—robust roles and permissions,
+              configurable workflows, and compliance-ready controls—were
+              missing. To compete for larger, more sophisticated lenders, Built
+              needed more than incremental fixes: the flagship product had to be
+              replatformed to truly support enterprise scale.
             </p>
           </div>
         </section>
@@ -96,39 +87,47 @@ export default function DrawManagement() {
               experienced, and distilling it into a set of core problems to
               solve at the foundation of the product.
             </p>
-          </div>
-          <div className="container container--highlight my-lg">
-            <Grid templateColumns="240px 1fr" gap="md">
-              <div>
-                <h3 className="text-base mb-xs">
-                  Sorting through voice of the customer
-                </h3>
-                <p className="text-sm text-gray my-sm">
-                  We conducted an affinity mapping exercise to group similar
-                  feedback into themes and identify the most pressing problems.
-                  This exercise helped us prioritize the most critical issues
-                  and set the foundation for the replatforming effort.
-                </p>
-              </div>
-              <div className="case-study-image-block">
-                <img
-                  src="/img-voc-affinity-mapping.png"
-                  alt="Affinity mapping exercise from historical voice of the customer feedback"
-                  className="case-study-image"
-                />
-              </div>
-            </Grid>
-          </div>
-          <div className="container">
+            <div className="container container--highlight my-lg">
+              <Grid templateColumns="240px 1fr" gap="md">
+                <div>
+                  <h3 className="text-base mb-xs">
+                    Sorting through voice of the customer
+                  </h3>
+                  <p className="text-sm text-gray my-sm">
+                    We conducted an affinity mapping exercise to group similar
+                    feedback into themes and identify the most pressing
+                    problems. This exercise helped us prioritize the most
+                    critical issues and set the foundation for the replatforming
+                    effort.
+                  </p>
+                </div>
+                <div className="case-study-image-block">
+                  <img
+                    src="/img-voc-affinity-mapping.png"
+                    alt="Affinity mapping exercise from historical voice of the customer feedback"
+                    className="case-study-image"
+                  />
+                </div>
+              </Grid>
+            </div>
             <p className="text-base text-gray mb-md">
               Through our research and analysis, we identified a set of core
               problems that consistently surfaced across customer feedback,
-              technical reviews, and user interviews. Addressing these issues
-              was essential to building a platform that could truly meet the
-              needs of enterprise lenders and support future growth. Here are
-              the core problems we uncovered:
+              technical reviews, and user interviews.
             </p>
             <Grid templateColumns="1fr 1fr" gap="md">
+              <GridBlock
+                title="Limited control of sources and uses"
+                description="Funding sources and their uses (the items being funded) lacked governance controls and didn't support the full range of CRE financing options."
+              />
+              <GridBlock
+                title="Inefficient manual processes"
+                description="Many routine tasks—like document review, data entry, and exception handling—were manual and time-consuming, limiting productivity and leaving little room for automation or AI-driven efficiency gains."
+              />
+              <GridBlock
+                title="Rigid workflows"
+                description="Status names, processes, and rules were hardcoded, forcing lenders into inflexible workflows that didn’t reflect their business."
+              />
               <GridBlock
                 title="Insufficient permissioning"
                 description="The legacy model supported only basic roles and could not scale to the complex hierarchies enterprise lenders required."
@@ -138,14 +137,6 @@ export default function DrawManagement() {
                 description="Authentication and password management lacked enterprise options like two-factor, SSO, and streamlined reset flows."
               />
               <GridBlock
-                title="Rigid workflows"
-                description="Status names, processes, and rules were hardcoded, forcing lenders into inflexible workflows that didn’t reflect their business."
-              />
-              <GridBlock
-                title="Inconsistent naming"
-                description="Field labels and naming conventions couldn’t be customized to match institutional standards, creating confusion across products."
-              />
-              <GridBlock
                 title="Limits at scale"
                 description="The system struggled with complex CRE deals, capping the number of stakeholders or financed properties that could be managed."
               />
@@ -153,10 +144,7 @@ export default function DrawManagement() {
                 title="Constrained scope"
                 description="The platform focused narrowly on construction lending, leaving no way to extend into permanent asset management."
               />
-              <GridBlock
-                title="Collaboration friction"
-                description="Teams lacked tools to coordinate effectively within the platform or to collaborate externally with borrowers and vendors."
-              />
+
               <GridBlock
                 title="Limited notifications"
                 description="The system offered too few notifications for the events lenders cared about, and provided no way to control who received them."
@@ -177,15 +165,133 @@ export default function DrawManagement() {
               product from the ground up, designing enterprise-grade
               capabilities, flexible workflows, and extensible architecture into
               its core.
-            </p>
+            </p>{" "}
             <p className="text-base text-gray my-md">
               Each of the problems we identified became a focal point for the
-              solution. We defined clear requirements, partnered closely with
+              solution—we defined clear requirements, partnered closely with
               engineering to shape the technical model, and validated with
               lenders to ensure the features met enterprise expectations without
               sacrificing usability.
             </p>
           </div>
+
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="lg">
+              <div>
+                <h3 className="text-base mb-xs">Expanded sources and uses</h3>
+                <p className="text-sm text-gray my-sm">
+                  We expanded the sources and uses to support the full range of
+                  CRE financing options and governance controls.
+                </p>
+                <ul className="list-bullets text-sm text-gray">
+                  <li>
+                    Sources and uses are now fully configurable with unlimited
+                    types and categories.
+                  </li>
+                  <li>
+                    Over 100 new data points are able to be collected on sources
+                    to capture the full range of CRE financing options.
+                  </li>
+                  <li>
+                    Lenders can define eligibility controls that govern which
+                    sources are eligible to be used for a given source.
+                  </li>
+                  <li>
+                    The UI display was updated to show the sources and uses more
+                    intuitively while also fixing performance issues.
+                  </li>
+                </ul>
+              </div>
+              <div className="case-study-image-block">
+                <Grid templateColumns="1fr" gap="lg">
+                  <img
+                    src="/img-sources-uses-setup.png"
+                    alt="Sources and uses setup screen"
+                    className="case-study-image"
+                  />
+                  <img
+                    src="/img-expanded-source-details.png"
+                    alt="Expanded source details screen"
+                    className="case-study-image"
+                  />
+                </Grid>
+              </div>
+            </Grid>
+          </div>
+
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="lg">
+              <div>
+                <h3 className="text-base mb-xs">AI-powered efficiency</h3>
+                <p className="text-sm text-gray my-sm">
+                  We introduced a new AI-powered data extraction and
+                  classification process that simplifies data entry and improves
+                  accuracy.
+                </p>
+                <ul className="list-bullets text-sm text-gray">
+                  <li>No chatbots, no LLMs, just AI-powered efficiency.</li>
+                  <li>
+                    Uploaded documents are now automatically extracted, parsed,
+                    and mapped to the appropriate fields.
+                  </li>
+                  <li>
+                    New design patterns were introduced to provide consistent
+                    indicators for information provided by the AI.
+                  </li>
+                </ul>
+              </div>
+              <div className="case-study-image-block">
+                <Grid templateColumns="1fr" gap="lg">
+                  <img
+                    src="/img-ai-doc-review.png"
+                    alt="AI-powered document review"
+                    className="case-study-image"
+                  />
+                </Grid>
+              </div>
+            </Grid>
+          </div>
+
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="lg">
+              <div>
+                <h3 className="text-base mb-xs">Composable workflows</h3>
+                <p className="text-sm text-gray my-sm">
+                  We introduced a new composable workflow model that allows
+                  lenders to create and manage their own workflows.
+                </p>
+                <ul className="list-bullets text-sm text-gray">
+                  <li>
+                    Workflows are fully configurable with unlimited steps and
+                    conditions.
+                  </li>
+                  <li>
+                    Lenders can define statuses, actions, and conditions for
+                    their workflows.
+                  </li>
+                  <li>
+                    Dynamic actions can be triggered when a workflow moves from
+                    one status to another.
+                  </li>
+                </ul>
+              </div>
+              <div className="case-study-image-block">
+                <Grid templateColumns="1fr" gap="lg">
+                  <img
+                    src="/img-workflow-map.png"
+                    alt="Workflow map"
+                    className="case-study-image"
+                  />
+                  <img
+                    src="/img-workflow-builder.png"
+                    alt="Workflow builder"
+                    className="case-study-image"
+                  />
+                </Grid>
+              </div>
+            </Grid>
+          </div>
+
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="lg">
               <div>
@@ -193,7 +299,9 @@ export default function DrawManagement() {
                   Enterprise-grade roles &amp; permissions
                 </h3>
                 <p className="text-sm text-gray my-sm">
-                  We introduced a new enterprise-grade RBAC model.
+                  We introduced a new enterprise-grade RBAC model that allows
+                  lenders (and our internal teams) to manage users and
+                  permissions for a tenant.
                 </p>
                 <ul className="list-bullets text-sm text-gray">
                   <li>
@@ -212,58 +320,11 @@ export default function DrawManagement() {
               <div>
                 <div className="case-study-image-block mb-lg">
                   <img
-                    src="/img-draw-desk.png"
+                    src="/img-tenant-user-mgmt.png"
                     alt="Draw Desk Interface"
                     className="case-study-image"
                   />
                 </div>
-                <Grid templateColumns="1fr 1fr" gap="lg">
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-detail-panel.png"
-                      alt="Details panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The draw card detail panel appears when a draw is
-                      selected. It contains the draw's details, actions, and
-                      context.
-                    </p>
-                  </div>
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-columns.png"
-                      alt="Columns panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The columns menu allows lenders to customize the columns
-                      that are displayed in the Draw Desk.
-                    </p>
-                  </div>
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-filters.png"
-                      alt="Filters panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The filters panel allows lenders to filter draws on any
-                      column.
-                    </p>
-                  </div>
-                  <div className="case-study-image-block">
-                    <img
-                      src="/img-draw-desk-bulk-actions.png"
-                      alt="Bulk actions panel"
-                      className="case-study-image"
-                    />
-                    <p className="text-caption text-gray">
-                      The bulk actions panel allows lenders to perform bulk
-                      actions on the current selection of draws.
-                    </p>
-                  </div>
-                </Grid>
               </div>
             </Grid>
           </div>
@@ -271,66 +332,58 @@ export default function DrawManagement() {
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="lg">
               <div>
-                <h3 className="text-base mb-xs">Draw card anatomy</h3>
+                <h3 className="text-base mb-xs">Enhanced account security</h3>
                 <p className="text-sm text-gray my-sm">
-                  The draw card became the workhorse of the Draw Desk providinga
-                  quick snapshot that let lenders see the essentials and take
-                  action without ever leaving the page. In redesigning it, I
-                  modernized the look and expanded its capabilities so it could
-                  flex across use cases. What started as a single component grew
-                  into a reusable pattern anytime the product needed to show a
-                  draw in miniature.
+                  Multi-factor authentication, SSO, and password reset flows
+                  were improved to meet enterprise security standards.
+                </p>
+                <p className="text-sm text-gray my-sm">
+                  Lenders can now choose to use their own password manager or
+                  use Built's password manager.
                 </p>
               </div>
               <div className="case-study-image-block">
                 <img
-                  src="/img-draw-card-anatomy.png"
-                  alt="Draw Card Anatomy"
+                  src="/img-account-settings.png"
+                  alt="My account showing multi-factor authentication"
                   className="case-study-image"
                 />
               </div>
             </Grid>
           </div>
+
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="lg">
               <div>
-                <h3 className="text-base mb-xs">Saved view selector</h3>
+                <h3 className="text-base mb-xs">No limits.</h3>
                 <p className="text-sm text-gray my-sm">
-                  Saved views enable lenders to customize the filter, sort, and
-                  column selection to enable their "secret sauce" workflows.
+                  The new platform is designed to support one or one-thousand
+                  properties, stakeholders, or other entities. Gone are the days
+                  of "this is the limit".
                 </p>
-                <p className="text-sm text-gray my-sm">
-                  We shipped with several "default views" to get lenders started
-                  and to support many of the known use cases.
-                </p>
+                <ul className="list-bullets text-sm text-gray">
+                  <li>
+                    Multi-property deals are now supported with no limits on the
+                    number of properties.
+                  </li>
+                  <li>
+                    Multiple borrowers, contractors, and vendors can be added
+                    without limits and collaborate with ease.
+                  </li>
+                  <li>
+                    New design patterns were introduced to support new search
+                    indexing, pagination, and filtering.
+                  </li>
+                </ul>
               </div>
               <div className="case-study-image-block">
-                <img
-                  src="/img-saved-views.png"
-                  alt="Saved views selector"
-                  className="case-study-image"
-                />
-              </div>
-            </Grid>
-          </div>
-          <div className="container container--wide container--highlight my-xl">
-            <Grid templateColumns="300px 1fr" gap="lg">
-              <div>
-                <h3 className="text-base mb-xs">Information architecture</h3>
-                <p className="text-sm text-gray my-sm">
-                  To satisfy the goal of reducing IA complexity, we collapsed
-                  multiple legacy pages into a single centralized hub. This
-                  simplified the user experience, made training and onboarding
-                  easier, and reduced the amount of code needed to support the
-                  different loan types and workflows.
-                </p>
-              </div>
-              <div className="case-study-image-block">
-                <img
-                  src="/img-draw-desk-ia.png"
-                  alt="Information architecture changes"
-                  className="case-study-image"
-                />
+                <Grid templateColumns="1fr" gap="lg">
+                  <img
+                    src="/img-multi-property.png"
+                    alt="Multiple properties supported on a deal"
+                    className="case-study-image"
+                  />
+                </Grid>
               </div>
             </Grid>
           </div>
@@ -340,50 +393,30 @@ export default function DrawManagement() {
         <section className="section">
           <div className="container">
             <h2 className="text-3xl mb-sm">Impact</h2>
-            <Grid
-              templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
-              gap="lg"
-              className="impact-grid"
-            >
+            <p className="text-base text-gray my-md">
+              It's still early days (GTM - Q1 2025), but the initial signs
+              suggest we're on the right track. The replatform delivered the
+              scale and flexibility lenders needed for complex commercial real
+              estate deals, and the feedback so far has validated the hard
+              choices made along the way.
+            </p>
+            <Grid templateColumns="1fr 1fr 1fr" gap="lg">
               <GridBlock
-                title="User Adoption"
+                title="Volume"
                 description={
                   <>
-                    <strong>63% monthly usage rate</strong> - Draw Desk became
-                    the top page in the application, demonstrating strong user
-                    adoption and workflow integration
+                    <strong>$220+ billion</strong> in commercial real estate
+                    dollars active on the platform.
                   </>
                 }
               />
               <GridBlock
-                title="Processing Efficiency"
-                description={
-                  <>
-                    <strong>2.75 days average</strong> draw turnaround time
-                    across all loan types, with Consumer loans at 2.9 days and
-                    Homebuilder loans at 1.5 days
-                  </>
-                }
+                title="Adoption &amp; migration"
+                description="Existing customers are steadily migrating to the new platform and are loving the new capabilities."
               />
               <GridBlock
-                title="Scale & Volume"
-                description={
-                  <>
-                    <strong>40,000 draws monthly</strong> processed through the
-                    unified system, handling over{" "}
-                    <strong>$5B+ in monthly draw volume</strong>
-                  </>
-                }
-              />
-              <GridBlock
-                title="Technical Foundation"
-                description={
-                  <>
-                    Established React as the frontend standard, consolidated
-                    multiple legacy pages, and improved developer velocity
-                    across the platform
-                  </>
-                }
+                title="New customer segment"
+                description="The new platform is attracting lenders who specialize in asset management, not just construction lending."
               />
             </Grid>
           </div>
@@ -395,23 +428,19 @@ export default function DrawManagement() {
             <div className="separator my-xl"></div>
             <h2 className="text-3xl mb-sm">Reflection</h2>
             <p className="text-base text-gray my-md">
-              This initiative reinforced that solving workflow scale problems
-              requires more than UI cleanup. It demanded aligning business
-              incentives (interest income), user needs (faster queues,
-              transparency), and technical strategy (modern stack).
+              Though I've since moved on from Built, I'm excited to see how the
+              new platform continues to grow, especially as it expands into
+              broader asset management workflows like property oversight, lease
+              data, and cash flow management.
             </p>
             <p className="text-base text-gray my-md">
-              Introducing <strong>Saved Views</strong> was a pivotal moment—it
-              set the stage for lender-driven customization, allowing them to
-              tailor workflows while reducing the need for bespoke features.
-              This balance of{" "}
-              <strong>
-                scalability, flexibility, and technical modernization
-              </strong>{" "}
-              positioned the product to serve lenders across all loan types more
-              effectively. After the release of Draw Desk, saved views became
-              the new standard for several of our grid experiences and became a
-              key part of our product's design system.
+              Looking ahead, the biggest challenge will be balance. If all loan
+              types (consumer, homebuilder, and commercial) eventually move onto
+              this new platform, the risk is overwhelming simpler users with
+              tools designed for the most complex scenarios. The opportunity
+              will be to keep the enterprise-grade power while meeting lenders
+              at their level of sophistication, ensuring that the platform
+              scales both up and down gracefully.
             </p>
           </div>
         </section>

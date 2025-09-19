@@ -54,10 +54,10 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   handler satisfies AppPageConfig<"/case-studies/enterprise-replatform">
 }
 
-// Validate ../../src/app/case-studies/miscellaneous/page.tsx
+// Validate ../../src/app/case-studies/highlight-reel/page.tsx
 {
-  const handler = {} as typeof import("../../src/app/case-studies/miscellaneous/page.js")
-  handler satisfies AppPageConfig<"/case-studies/miscellaneous">
+  const handler = {} as typeof import("../../src/app/case-studies/highlight-reel/page.js")
+  handler satisfies AppPageConfig<"/case-studies/highlight-reel">
 }
 
 // Validate ../../src/app/page.tsx
