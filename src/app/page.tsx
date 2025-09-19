@@ -1,7 +1,6 @@
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Philosophy from "./components/Philosophy";
 import WhatIDo from "./components/WhatIDo";
 import CaseStudies from "./components/CaseStudies";
 

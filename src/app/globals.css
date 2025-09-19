@@ -416,6 +416,21 @@ a {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.list-bullets {
+  list-style: disc;
+  margin: 0;
+  padding-left: var(--spacing-md);
+}
+
+.list-bullets li {
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1856,7 +1871,7 @@ img.case-study-image {
 
 .contact-form-modal {
   background: var(--color-dark);
-  border-radius: 12px;
+  border-radius: var(--spacing-xs);
   border: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 500px;
   width: 100%;
@@ -1880,7 +1895,7 @@ img.case-study-image {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1919,11 +1934,12 @@ img.case-study-image {
 .form-textarea {
   width: 100%;
   padding: var(--spacing-sm);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   background: var(--color-darker);
   color: var(--color-white);
   font-size: var(--font-size-base);
+  font-family: monospace;
   transition: border-color var(--transition-fast);
 }
 
@@ -1931,6 +1947,7 @@ img.case-study-image {
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-link);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-link) 20%, transparent);
 }
 
 .form-input::placeholder,

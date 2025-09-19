@@ -53,52 +53,33 @@ export default function DrawManagement() {
           <div className="container">
             <h2 className="text-3xl">The challenge</h2>
             <p className="text-gray my-md">
-              In 2021, I led discovery sessions with lenders to dig into one of
-              the most critical pain points in our platform: draw
-              management&mdash;the process of disbursing funds from a loan. This
-              was the heartbeat of our product and the clearest way customers
-              measured ROI.
+              By 2020, Built had proven product–market fit in consumer and
+              homebuilder lending. Those products worked well for smaller loans
+              and simpler workflows, but the company's growth ambitions were
+              moving upmarket into commercial real estate. That's where the
+              cracks started to show.
             </p>
+
             <p className="text-gray my-md">
-              The conversations surfaced clear themes, which defined the
-              challenges we set out to solve.
+              What worked for consumer and homebuilder loans wasn't going to cut
+              it for enterprise CRE. The size of the deals, the number of
+              records being managed, and the complexity of workflows were far
+              beyond what the existing platform could handle.
             </p>
-            <Grid templateColumns="1fr 1fr" gap="md">
-              <GridBlock
-                title="Too many experiences"
-                description="There were simply too many manifestations of draw management within the product. This spawned from the fact that we were supporting multiple lines of business with different workflows and requirements."
-              />
-              <GridBlock
-                title="Inefficient queues"
-                description="Lenders were frustrated with the inefficient queues they were forced to navigate. They wanted to be able to process stale draws first or see those missing external vendor documents."
-              />
-              <GridBlock
-                title="Transparency gaps"
-                description="Lenders needed to quickly confirm where funds were going and see inspection context without drilling into every loan"
-              />
-              <GridBlock
-                title="Customization needs"
-                description="Many emphasized their 'secret sauce' processes and wanted flexibility to filter, sort, and see their data in a way that made sense for them."
-              />
-            </Grid>
-          </div>
-          <div className="container container--wide">
-            <div className="case-study-image-block my-xl">
-              <img
-                src="/img-draw-experiences.png"
-                className="case-study-image"
-                alt="Legacy draw experiences in the construction loan administration product"
-              />
-              <div className="container">
-                <p className="text-caption text-gray">
-                  Assorted screenshots of the multiple draw experiences for
-                  different lines of business, each with their own set of
-                  features and workflows. This was a major pain point for
-                  lenders as they had to navigate between multiple experiences
-                  to get the information they needed.
-                </p>
-              </div>
-            </div>
+
+            <p className="text-gray my-md">
+              The technology itself was outdated, and each attempt to extend it
+              only introduced more fragility. Just as important, the
+              fundamentals enterprise clients expected—robust roles and
+              permissions, configurable workflows, and compliance-ready
+              controls—were missing.
+            </p>
+
+            <p className="text-gray my-md">
+              To compete in CRE and serve larger, more sophisticated lenders,
+              Built needed more than incremental fixes. The challenge was clear:
+              replatform the flagship product to handle enterprise scale.
+            </p>
           </div>
         </section>
 
@@ -108,43 +89,80 @@ export default function DrawManagement() {
             <div className="separator my-xl"></div>
             <h2 className="text-3xl mb-sm">Identifying the problem</h2>
             <p className="text-gray mb-md">
-              The patterns made the pain impossible to ignore. Lenders weren't
-              simply inconvenienced—they were blocked from doing their core job
-              efficiently. We captured these frustrations in a problem statement
-              to align the team and chart a path forward.
+              Over the years, we'd accumulated a deep inventory of “voice of the
+              customer” feedback, recurring pain points, and long-standing
+              technical needs. With the opportunity to replatform, we stepped
+              back to first principles—reviewing everything we'd heard and
+              experienced, and distilling it into a set of core problems to
+              solve at the foundation of the product.
             </p>
-            <Grid templateColumns="1fr" gap="md">
-              <GridBlock
-                size="lg"
-                title="The problem statement"
-                description="Managing draws across diverse construction loan products is fragmented and inefficient. Each loan type (consumer, homebuilder, commercial) requires different documentation and review processes, forcing lenders into manual, siloed workflows. This slows down approvals, delays capital deployment, and ultimately reduces earned interest income."
-              />
-              <GridBlock
-                size="lg"
-                title="The hypothesis"
-                description="If we create a centralized hub for draws, we can abstract away product-specific complexity and unify lenders into a single streamlined workflow. This will allow them to move faster through their queues, improve draw turnaround times, and accelerate capital deployment, which increases earned interest across their portfolios."
-              />
+          </div>
+          <div className="container container--highlight my-lg">
+            <Grid templateColumns="240px 1fr" gap="md">
+              <div>
+                <h3 className="text-base mb-xs">
+                  Sorting through voice of the customer
+                </h3>
+                <p className="text-sm text-gray my-sm">
+                  We conducted an affinity mapping exercise to group similar
+                  feedback into themes and identify the most pressing problems.
+                  This exercise helped us prioritize the most critical issues
+                  and set the foundation for the replatforming effort.
+                </p>
+              </div>
+              <div className="case-study-image-block">
+                <img
+                  src="/img-voc-affinity-mapping.png"
+                  alt="Affinity mapping exercise from historical voice of the customer feedback"
+                  className="case-study-image"
+                />
+              </div>
             </Grid>
-            <h2 className="text-xl mt-xl my-md">Additional goals</h2>
+          </div>
+          <div className="container">
+            <p className="text-base text-gray mb-md">
+              Through our research and analysis, we identified a set of core
+              problems that consistently surfaced across customer feedback,
+              technical reviews, and user interviews. Addressing these issues
+              was essential to building a platform that could truly meet the
+              needs of enterprise lenders and support future growth. Here are
+              the core problems we uncovered:
+            </p>
             <Grid templateColumns="1fr 1fr" gap="md">
               <GridBlock
-                title="Reduce information architecture complexity"
-                description="Collapse multiple legacy pages (segmented by draw status) into a single centralized hub with status filters, reducing context-switching and surfacing the full picture."
+                title="Insufficient permissioning"
+                description="The legacy model supported only basic roles and could not scale to the complex hierarchies enterprise lenders required."
               />
               <GridBlock
-                title="Simplify onboarding &amp; training"
-                description="Provide one consistent interface across loan products, reducing ramp-up time for new users."
+                title="Security gaps"
+                description="Authentication and password management lacked enterprise options like two-factor, SSO, and streamlined reset flows."
               />
               <GridBlock
-                title="Address diverse lender needs at scale"
-                description="Lenders rely on unique “secret sauce” processes, which previously forced bespoke feature requests. The goal was to introduce customization tools that let them solve their own problems."
+                title="Rigid workflows"
+                description="Status names, processes, and rules were hardcoded, forcing lenders into inflexible workflows that didn’t reflect their business."
               />
               <GridBlock
-                title="Increase developer velocity, efficiency, and delight"
-                description="Deliver Built's first React frontend, modernizing the stack and deprecating redundant pages, which lowered bug risk and freed up engineering time."
+                title="Inconsistent naming"
+                description="Field labels and naming conventions couldn’t be customized to match institutional standards, creating confusion across products."
+              />
+              <GridBlock
+                title="Limits at scale"
+                description="The system struggled with complex CRE deals, capping the number of stakeholders or financed properties that could be managed."
+              />
+              <GridBlock
+                title="Constrained scope"
+                description="The platform focused narrowly on construction lending, leaving no way to extend into permanent asset management."
+              />
+              <GridBlock
+                title="Collaboration friction"
+                description="Teams lacked tools to coordinate effectively within the platform or to collaborate externally with borrowers and vendors."
+              />
+              <GridBlock
+                title="Limited notifications"
+                description="The system offered too few notifications for the events lenders cared about, and provided no way to control who received them."
               />
             </Grid>
-            <div className="separator my-xl"></div>
+            <div className="separator my-2xl"></div>
           </div>
         </section>
 
@@ -153,51 +171,43 @@ export default function DrawManagement() {
           <div className="container">
             <h2 className="text-3xl mb-sm">The solution</h2>
             <p className="text-base text-gray my-md">
-              We introduced the <strong>Draw Desk</strong>, a centralized page
-              that replaced multiple fragmented screens and became the single
-              queue for draws across all lines of business.
+              After much debate, we decided to replatform the flagship product.
+              Replatforming gave us the opportunity to tackle these foundational
+              gaps directly. Instead of layering on more patches, we rebuilt the
+              product from the ground up, designing enterprise-grade
+              capabilities, flexible workflows, and extensible architecture into
+              its core.
             </p>
-            <h3 className="text-xl mt-xl my-md">Core design principles</h3>
-            <Grid templateColumns="1fr 1fr" gap="md">
-              <GridBlock
-                title="Unified interface"
-                description="A simple grid-based layout with familiar sorting, filtering, and column controls across all loan types"
-              />
-              <GridBlock
-                title="Lender customization"
-                description={
-                  <>
-                    Supported lender “secret sauce” through customizable saved
-                    views (e.g., order by "time in status" or "awaiting
-                    inspection”)
-                  </>
-                }
-              />
-              <GridBlock
-                title="Contextual actions"
-                description={
-                  <>
-                    <strong>"Draw Cards"</strong> provided at-a-glance context
-                    and surfaced actions without leaving the page
-                  </>
-                }
-              />
-              <GridBlock
-                title="Loan-specific adaptations"
-                description="Draw details and calls to action were dynamically rendered based on the loan type"
-              />
-            </Grid>
+            <p className="text-base text-gray my-md">
+              Each of the problems we identified became a focal point for the
+              solution. We defined clear requirements, partnered closely with
+              engineering to shape the technical model, and validated with
+              lenders to ensure the features met enterprise expectations without
+              sacrificing usability.
+            </p>
           </div>
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="lg">
               <div>
-                <h3 className="text-base mb-xs">Interface layout</h3>
+                <h3 className="text-base mb-xs">
+                  Enterprise-grade roles &amp; permissions
+                </h3>
                 <p className="text-sm text-gray my-sm">
-                  Draws were organized into two sections within the Draw Desk:{" "}
-                  <strong>Active</strong> and <strong>Historical</strong>.
-                  Active draws included draws across any status that was not
-                  "Transferred" or "Archived".
+                  We introduced a new enterprise-grade RBAC model.
                 </p>
+                <ul className="list-bullets text-sm text-gray">
+                  <li>
+                    Roles are fully configurable with unlimited permission sets.
+                  </li>
+                  <li>
+                    Fine-grained controls allow institutions to mirror their
+                    organizational hierarchies and approval chains.
+                  </li>
+                  <li>
+                    Designed for scale so complex enterprises could finally
+                    administer access without workarounds.
+                  </li>
+                </ul>
               </div>
               <div>
                 <div className="case-study-image-block mb-lg">

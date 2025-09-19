@@ -43,9 +43,9 @@ export default function DrawManagement() {
 
         {/* Solution */}
         <section className="section">
-          <div className="container container--wide container--highlight">
-            <Grid templateColumns="300px 1fr" gap="md" className="my-2xl">
-              <div className="text-content">
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="md">
+              <div>
                 <h3 className="text-base mb-xs">CQ Roll Call: Engage</h3>
                 <p className="text-sm text-gray my-sm">
                   CQ Roll Call Engage is a grassroots advocacy and outreach
@@ -71,9 +71,9 @@ export default function DrawManagement() {
               </div>
             </Grid>
           </div>
-          <div className="container container--wide container--highlight">
-            <Grid templateColumns="300px 1fr" gap="md" className="my-2xl">
-              <div className="text-content">
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="md">
+              <div>
                 <h3 className="text-base mb-xs">Built Inspect</h3>
 
                 <p className="text-sm text-gray my-sm">
@@ -95,9 +95,9 @@ export default function DrawManagement() {
               </div>
             </Grid>
           </div>
-          <div className="container container--wide container--highlight">
-            <Grid templateColumns="300px 1fr" gap="md" className="my-2xl">
-              <div className="text-content">
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="md">
+              <div>
                 <h3 className="text-base mb-xs">Healthier Tennessee</h3>
                 <p className="text-sm text-gray my-sm">
                   In 2014 I led the UX design for a new mobile app for Healthier
@@ -131,8 +131,8 @@ export default function DrawManagement() {
               </div>
             </Grid>
           </div>
-          <div className="container container--wide container--highlight">
-            <Grid templateColumns="300px 1fr" gap="md" className="my-2xl">
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="md">
               <div className="text-content">
                 <h3 className="text-base mb-xs">Beatlynk</h3>
                 <p className="text-sm text-gray my-sm">

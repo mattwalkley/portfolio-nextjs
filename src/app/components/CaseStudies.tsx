@@ -32,7 +32,7 @@ const caseStudies = [
     description:
       "Selected highlights from a range of client projects—showcasing unique challenges, creative problem-solving, and impact across different industries.",
     image: "/img-timber-cover.png",
-    link: "/case-studies/design-system",
+    link: "/case-studies/miscellaneous",
     password: "portfolio2024",
   },
 ];

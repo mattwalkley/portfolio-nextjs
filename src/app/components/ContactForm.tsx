@@ -126,7 +126,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 onChange={handleChange}
                 required
                 className="form-input"
-                placeholder="Your name"
+                placeholder=""
               />
             </div>
 
