@@ -3,9 +3,9 @@ import Grid from "./Grid";
 const caseStudies = [
   {
     id: 1,
-    title: "Enterprise Re-Platform",
+    title: "Enterprise Platform Redesign",
     description:
-      "How I led the design of Built's flagship CRE lending product re-platform, transforming a legacy system into a modern, scalable platform",
+      "How I led the transformation of Built's flagship CRE lending product—redesigning and replatforming a legacy system into a modern, scalable solution.",
     image: "/img-replatform-cover.png",
     link: "/case-studies/enterprise-replatform",
   },
@@ -24,16 +24,14 @@ const caseStudies = [
       "How I led the creation of a design system—hiring the team, driving buy-in, and contributing from implementation to adoption",
     image: "/img-timber-cover.png",
     link: "/case-studies/design-system",
-    password: "portfolio2024",
   },
   {
     id: 4,
-    title: "Miscellaneous",
+    title: "Highlight Reel",
     description:
       "Selected highlights from a range of client projects—showcasing unique challenges, creative problem-solving, and impact across different industries.",
-    image: "/img-timber-cover.png",
-    link: "/case-studies/miscellaneous",
-    password: "portfolio2024",
+    image: "/img-highlight-reel-cover.png",
+    link: "/case-studies/highlight-reel",
   },
 ];
 
@@ -55,9 +53,9 @@ export default function CaseStudies() {
         <div className="image-block">
           <img src={study.image} alt={study.title} style={imageStyles} />
         </div>
-        <div className="case-study-content">
-          <h3 className="text-base">{study.title}</h3>
-          <p className="text-sm text-gray my-xs">{study.description}</p>
+        <div className="case-study-content text-left">
+          <h3 className="text-lg">{study.title}</h3>
+          <p className="text-base text-gray my-xs">{study.description}</p>
         </div>
       </a>
     );

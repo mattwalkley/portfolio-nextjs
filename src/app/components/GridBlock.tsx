@@ -19,9 +19,9 @@ export default function GridBlock({
       case "sm":
         return "text-sm mb-xs";
       case "md":
-        return "text-base mb-xs";
+        return "text-sm mb-xs";
       case "lg":
-        return "text-base mb-sm";
+        return "text-lg mb-sm";
       default:
         return "text-sm mb-xs";
     }
