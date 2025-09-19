@@ -2,21 +2,37 @@ import Grid from "./Grid";
 
 const caseStudies = [
   {
+    id: 1,
+    title: "Enterprise Re-Platform",
+    description:
+      "How I led the design of Built's flagship CRE lending product re-platform, transforming a legacy system into a modern, scalable platform",
+    image: "/img-replatform-cover.png",
+    link: "/case-studies/enterprise-replatform",
+  },
+  {
     id: 2,
     title: "Centralizing Draw Management",
     description:
       "How I redesigned a construction finance product's fragmented draw workflows into a unified, scalable system that improved efficiency across all loan types",
     image: "/img-draw-desk-cover.png",
-    figmaLink: "/case-studies/draw-management",
+    link: "/case-studies/draw-management",
+  },
+  {
+    id: 3,
+    title: "Timber Design System",
+    description:
+      "How I led the creation of a design system—hiring the team, driving buy-in, and contributing from implementation to adoption",
+    image: "/img-timber-cover.png",
+    link: "/case-studies/design-system",
     password: "portfolio2024",
   },
   {
-    id: 1,
-    title: "Budget Management Interface",
+    id: 4,
+    title: "Miscellaneous",
     description:
-      "Designed an intuitive budget tracking system for portfolio management, featuring hierarchical cost categorization and real-time financial insights",
-    image: "/img-draw-desk-cover.png",
-    figmaLink: "https://figma.com/file/budget-interface",
+      "Selected highlights from a range of client projects—showcasing unique challenges, creative problem-solving, and impact across different industries.",
+    image: "/img-timber-cover.png",
+    link: "/case-studies/miscellaneous",
     password: "portfolio2024",
   },
 ];
@@ -35,7 +51,7 @@ export default function CaseStudies() {
 
   const caseStudyCover = (study: any) => {
     return (
-      <a href={study.figmaLink} key={study.id} className="case-study-cover">
+      <a href={study.link} key={study.id} className="case-study-cover">
         <div className="image-block">
           <img src={study.image} alt={study.title} style={imageStyles} />
         </div>
@@ -57,7 +73,7 @@ export default function CaseStudies() {
           the product forward.
         </p>
       </div>
-      <div className="container wide">
+      <div className="container container--wide">
         <Grid templateColumns="1fr 1fr" gap="lg">
           {caseStudies.map((study) => caseStudyCover(study))}
         </Grid>

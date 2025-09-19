@@ -17,9 +17,9 @@ export default function GridBlock({
   const getHeadingClass = () => {
     switch (size) {
       case "sm":
-        return "text-xs mb-xs";
-      case "md":
         return "text-sm mb-xs";
+      case "md":
+        return "text-base mb-xs";
       case "lg":
         return "text-base mb-sm";
       default:
@@ -31,7 +31,7 @@ export default function GridBlock({
   const getTextClass = () => {
     switch (size) {
       case "sm":
-        return "text-xs text-gray";
+        return "text-sm text-gray";
       case "md":
         return "text-sm text-gray";
       case "lg":
@@ -41,8 +41,22 @@ export default function GridBlock({
     }
   };
 
+  // Size-based padding classes using CSS variables
+  const getPaddingClass = () => {
+    switch (size) {
+      case "sm":
+        return "p-sm";
+      case "md":
+        return "p-md";
+      case "lg":
+        return "p-lg";
+      default:
+        return "p-md";
+    }
+  };
+
   return (
-    <div className={`grid-block ${className}`}>
+    <div className={`grid-block ${getPaddingClass()} ${className}`}>
       {title && <h3 className={getHeadingClass()}>{title}</h3>}
       {description && <div className={getTextClass()}>{description}</div>}
       {children}

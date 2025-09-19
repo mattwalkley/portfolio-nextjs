@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ContactForm from "./ContactForm";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,14 +19,88 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (
+        isMobileMenuOpen &&
+        !target.closest(".mobile-nav") &&
+        !target.closest(".mobile-menu-button")
+      ) {
+        closeMobileMenu();
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
+  // Handle body scroll locking for both mobile menu and contact form
+  useEffect(() => {
+    if (isMobileMenuOpen || isContactFormOpen) {
+      // Store the current scroll position
+      const scrollY = window.scrollY;
+      
+      // Apply scroll lock styles
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+    } else {
+      // Restore scroll position and remove lock styles
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      
+      // Restore scroll position
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen, isContactFormOpen]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const openContactForm = () => {
+    setIsContactFormOpen(true);
+    setIsMobileMenuOpen(false); // Close mobile menu if open
+  };
+
+  const closeContactForm = () => {
+    setIsContactFormOpen(false);
+  };
+
   return (
     <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-content">
         {/* Logo and Name */}
-        <Link href="/" className="nav-logo">
+        <Link href="/" className="nav-logo" onClick={closeMobileMenu}>
           <svg
             width="auto"
-            height="28"
+            height="24"
             viewBox="0 0 68 36"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +119,8 @@ export default function Navigation() {
           </span>
         </Link>
 
-        <div className="nav-links">
+        {/* Desktop Navigation */}
+        <div className="nav-links desktop-nav">
           <Link
             href="https://linkedin.com/in/matt-walkley/"
             target="_blank"
@@ -53,11 +131,47 @@ export default function Navigation() {
           <Link href="/" className="nav-link">
             Resume
           </Link>
-          <a href="mailto:matthew.walkley@gmail.com" className="btn btn-nav">
+          <button onClick={openContactForm} className="btn btn-nav">
             Let's connect
-          </a>
+          </button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="mobile-menu-button"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <span className={`hamburger ${isMobileMenuOpen ? "open" : ""}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      <div className={`mobile-nav ${isMobileMenuOpen ? "open" : ""}`}>
+        <div className="mobile-nav-content">
+          <Link
+            href="https://linkedin.com/in/matt-walkley/"
+            target="_blank"
+            className="mobile-nav-link"
+            onClick={closeMobileMenu}
+          >
+            LinkedIn
+          </Link>
+          <Link href="/" className="mobile-nav-link" onClick={closeMobileMenu}>
+            Resume
+          </Link>
+          <button onClick={openContactForm} className="btn btn-mobile">
+            Let's connect
+          </button>
         </div>
       </div>
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactFormOpen} onClose={closeContactForm} />
     </nav>
   );
 }
