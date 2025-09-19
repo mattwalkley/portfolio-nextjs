@@ -8,9 +8,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Product Designer",
-  description: "Product designer portfolio showcasing case studies, thought leadership, and design expertise for startups and enterprise teams.",
-  keywords: ["product design", "UX design", "design systems", "startup design", "fractional design lead"],
+  title: "Matt Walkley | Design Leader. Systems Thinker. Builder.",
+  description:
+    "Product designer portfolio showcasing case studies, thought leadership, and design expertise for startups and enterprise teams.",
+  keywords: [
+    "product design",
+    "UX design",
+    "design systems",
+    "startup design",
+    "fractional design lead",
+  ],
 };
 
 export default function RootLayout({
@@ -20,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
-        {children}
-      </body>
+      <body className={inter.variable}>{children}</body>
     </html>
   );
 }
