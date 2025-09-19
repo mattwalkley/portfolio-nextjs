@@ -3,8 +3,12 @@ import Footer from "@/app/components/Footer";
 import Grid from "@/app/components/Grid";
 import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
+import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
+import { getCaseStudyData } from "@/app/utils/caseStudyData";
 
 export default function DrawManagement() {
+  const caseStudyData = getCaseStudyData(1);
+
   return (
     <CaseStudiesWrapper>
       <div className="page">
@@ -13,13 +17,9 @@ export default function DrawManagement() {
         {/* Hero Section */}
         <section className="hero my-lg">
           <div className="container mt-xl">
-            <h1 className="text-5xl mb-sm">Enterprise Platform Redesign</h1>
-            <p className="text-xl text-gray-300">
-              How I led the transformation of Built's flagship CRE lending
-              product—redesigning and replatforming a legacy system into a
-              modern, scalable solution.
-            </p>
-            <div className="container container--highlight my-m">
+            <h1 className="text-5xl mb-sm">{caseStudyData.title}</h1>
+            <p className="text-xl text-gray-300">{caseStudyData.description}</p>
+            <div className="container container--highlight my-md">
               <Grid templateColumns="1fr 1fr" gap="md">
                 <div className="detail-row">
                   <dt className="text-xs text-gray text-uppercase">Company</dt>
@@ -444,6 +444,8 @@ export default function DrawManagement() {
             </p>
           </div>
         </section>
+
+        <RelatedCaseStudies currentCaseStudyId={1} />
 
         <Footer />
       </div>
