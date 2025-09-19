@@ -3,8 +3,12 @@ import Footer from "@/app/components/Footer";
 import Grid from "@/app/components/Grid";
 import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
+import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
+import { getCaseStudyData } from "@/app/utils/caseStudyData";
 
 export default function DrawManagement() {
+  const caseStudyData = getCaseStudyData(3);
+
   return (
     <CaseStudiesWrapper>
       <div className="page">
@@ -13,11 +17,8 @@ export default function DrawManagement() {
         {/* Hero Section */}
         <section className="hero my-lg">
           <div className="container mt-xl">
-            <h1 className="text-5xl mb-sm">Timber Design System</h1>
-            <p className="text-xl text-gray-300">
-              How I led the creation of a design system—hiring the team, driving
-              buy-in, and contributing from implementation to adoption
-            </p>
+            <h1 className="text-5xl mb-sm">{caseStudyData.title}</h1>
+            <p className="text-xl text-gray-300">{caseStudyData.description}</p>
             <div className="container container--highlight my-md">
               <Grid templateColumns="1fr 1fr" gap="md">
                 <div className="detail-row">
@@ -101,11 +102,28 @@ export default function DrawManagement() {
           <div className="container">
             <h2 className="text-3xl mb-sm">The solution</h2>
             <p className="text-base text-gray my-md">
-              We created the <strong>Timber Design System</strong>, a unified
-              set of scalable, accessible components and guidelines that
-              replaced fragmented UI patterns and empowered teams to build
-              consistent, high-quality experiences across all products.
+              With a strong hypothesis, I set out to secure organizational
+              buy-in, hire the right talent, and establish the Platform UX team
+              to deliver Built's first unified design system within 12 months.
             </p>
+            <Grid templateColumns="1fr 1fr" gap="md">
+              <GridBlock
+                title="Organizational buy-in"
+                description="Secured organizational buy-in that investing in a design system was critical to our product's long-term success."
+              />
+              <GridBlock
+                title="Hiring the right talent"
+                description="Identified and hired the right talent—engineers with deep front-end expertise, React mastery, and a passion for design details and composability. We also brought on a dedicated product designer with prior design system experience."
+              />
+              <GridBlock
+                title="Establishing the Platform UX team"
+                description="Established the Platform UX team and set a clear mission: to build and ship Built's first design system into production."
+              />
+              <GridBlock
+                title="Timber Design System"
+                description="Over the course of the next 12 months, the Platform UX team delivered the Timber design system."
+              />
+            </Grid>
           </div>
           <div className="container container--wide">
             <div className="case-study-image-block my-xl">
@@ -254,6 +272,8 @@ export default function DrawManagement() {
             </p>
           </div>
         </section>
+
+        <RelatedCaseStudies currentCaseStudyId={3} />
 
         <Footer />
       </div>

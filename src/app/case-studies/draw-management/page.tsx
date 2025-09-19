@@ -3,8 +3,12 @@ import Footer from "@/app/components/Footer";
 import Grid from "@/app/components/Grid";
 import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
+import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
+import { getCaseStudyData } from "@/app/utils/caseStudyData";
 
 export default function DrawManagement() {
+  const caseStudyData = getCaseStudyData(2);
+
   return (
     <CaseStudiesWrapper>
       <div className="page">
@@ -13,12 +17,8 @@ export default function DrawManagement() {
         {/* Hero Section */}
         <section className="hero my-lg">
           <div className="container mt-xl">
-            <h1 className="text-5xl mb-sm">Centralizing Draw Management</h1>
-            <p className="text-xl text-gray-300">
-              How I redesigned a construction finance product's fragmented draw
-              workflows into a unified, scalable system that improved efficiency
-              across all loan types
-            </p>
+            <h1 className="text-5xl mb-sm">{caseStudyData.title}</h1>
+            <p className="text-xl text-gray-300">{caseStudyData.description}</p>
             <div className="container container--highlight my-md">
               <Grid templateColumns="1fr 1fr" gap="md">
                 <div className="detail-row">
@@ -388,6 +388,8 @@ export default function DrawManagement() {
             </p>
           </div>
         </section>
+
+        <RelatedCaseStudies currentCaseStudyId={2} />
 
         <Footer />
       </div>

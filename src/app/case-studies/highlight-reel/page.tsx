@@ -1,10 +1,13 @@
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
 import Grid from "@/app/components/Grid";
-import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
+import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
+import { getCaseStudyData } from "@/app/utils/caseStudyData";
 
 export default function DrawManagement() {
+  const caseStudyData = getCaseStudyData(4);
+
   return (
     <CaseStudiesWrapper>
       <div className="page">
@@ -13,17 +16,52 @@ export default function DrawManagement() {
         {/* Hero Section */}
         <section className="hero my-lg">
           <div className="container mt-xl">
-            <h1 className="text-5xl mb-sm">Highlight Reel</h1>
-            <p className="text-xl text-gray-300">
-              Selected highlights from a range of client and personal
-              projects—showcasing unique challenges, creative problem-solving,
-              and impact across different industries.
-            </p>
+            <h1 className="text-5xl mb-sm">{caseStudyData.title}</h1>
+            <p className="text-xl text-gray-300">{caseStudyData.description}</p>
           </div>
         </section>
 
         {/* Solution */}
         <section className="section">
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="md">
+              <div>
+                <h3 className="text-base mb-xs">CQ Roll Call: Engage</h3>
+                <p className="text-sm text-gray my-sm">
+                  CQ Roll Call Engage is a grassroots advocacy and outreach
+                  platform that helps organizations connect their members with
+                  policymakers. In 2011, I led the UX design for the platform,
+                  collaborating closely with product and engineering teams to
+                  define the user experience for creating and managing
+                  campaigns.
+                </p>
+                <ul className="list-bullets text-sm text-gray">
+                  <li>
+                    Established the entire design system for the platform.
+                  </li>
+                  <li>
+                    Implemented a drag and drop site builder for creating
+                    responsive advocacy campaign experiences&mdash;which was a
+                    new industry standard at the time.
+                  </li>
+
+                  <li>
+                    Was one of my first deep dives into true product design,
+                    working in agile teams and collaborating closely with
+                    product and engineering teams to define the user experience
+                    for creating and managing campaigns.
+                  </li>
+                </ul>
+              </div>
+              <div className="case-study-image-block">
+                <img
+                  src="/img-cqrollcall-engage.png"
+                  alt="CQ Roll Call: Engage"
+                  className="case-study-image"
+                />
+              </div>
+            </Grid>
+          </div>
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="md">
               <div>
@@ -65,34 +103,7 @@ export default function DrawManagement() {
               </div>
             </Grid>
           </div>
-          <div className="container container--wide container--highlight my-xl">
-            <Grid templateColumns="300px 1fr" gap="md">
-              <div>
-                <h3 className="text-base mb-xs">CQ Roll Call: Engage</h3>
-                <p className="text-sm text-gray my-sm">
-                  CQ Roll Call Engage is a grassroots advocacy and outreach
-                  platform that helps organizations connect their members with
-                  policymakers. It combines membership data with CQ's
-                  legislative intelligence to power targeted action alerts,
-                  campaigns, and communications, making it easier to mobilize
-                  supporters and influence policy outcomes.
-                </p>
-                <p className="text-sm text-gray my-sm">
-                  I led the UX design for the platform in 2012, working closely
-                  with the product and engineering teams to define the user
-                  experience for creating and managing different advocacy
-                  campaigns.
-                </p>
-              </div>
-              <div className="case-study-image-block">
-                <img
-                  src="/img-cqrollcall-engage.png"
-                  alt="CQ Roll Call: Engage"
-                  className="case-study-image"
-                />
-              </div>
-            </Grid>
-          </div>
+
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="md">
               <div>
@@ -179,6 +190,8 @@ export default function DrawManagement() {
             </Grid>
           </div>
         </section>
+
+        <RelatedCaseStudies currentCaseStudyId={4} />
 
         <Footer />
       </div>

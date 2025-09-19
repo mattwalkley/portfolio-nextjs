@@ -437,6 +437,37 @@ img.case-study-image {
   padding: var(--spacing-md);
 }
 
+.case-study-card {
+  display: block;
+  text-decoration: none;
+  color: var(--color-white);
+  border-radius: var(--spacing-xs);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  background-color: var(--color-darker);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.case-study-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.case-study-card .image-block {
+  display: block;
+  opacity: 1;
+}
+
+.case-study-card .image-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-study-card .case-study-content {
+  padding: var(--spacing-md);
+}
+
 /* Containers */
 
 .container {
