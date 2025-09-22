@@ -1,6 +1,5 @@
 {
-  "/case-studies/draw-management/page": "app/case-studies/draw-management/page.js",
-  "/case-studies/design-system/page": "app/case-studies/design-system/page.js",
-  "/case-studies/enterprise-replatform/page": "app/case-studies/enterprise-replatform/page.js",
-  "/page": "app/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/case-studies/design-system/page": "app/case-studies/design-system/page.js"
 }

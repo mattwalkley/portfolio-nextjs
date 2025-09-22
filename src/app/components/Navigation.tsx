@@ -66,7 +66,7 @@ export default function Navigation() {
         {/* Logo and Name */}
         <Link href="/" className="nav-logo">
           <svg
-            width="auto"
+            width="68"
             height="24"
             viewBox="0 0 68 36"
             fill="none"
