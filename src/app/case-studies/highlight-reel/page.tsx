@@ -4,6 +4,43 @@ import Grid from "@/app/components/Grid";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
 import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
 import { getCaseStudyData } from "@/app/utils/caseStudyData";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Highlight Reel | Matt Walkley",
+  description:
+    "Selected highlights from a range of client projects—showcasing unique challenges, creative problem-solving, and impact across different industries.",
+  keywords: [
+    "product design",
+    "UX design",
+    "portfolio",
+    "case studies",
+    "client work",
+    "design highlights",
+  ],
+  openGraph: {
+    title: "Highlight Reel | Matt Walkley",
+    description:
+      "Selected highlights from a range of client projects—showcasing unique challenges, creative problem-solving, and impact across different industries.",
+    type: "article",
+    url: "https://mattwalkley.com/case-studies/highlight-reel",
+    images: [
+      {
+        url: "https://mattwalkley.com/img-highlight-reel-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Highlight Reel - Portfolio Showcase",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Highlight Reel | Matt Walkley",
+    description:
+      "Selected highlights from a range of client projects—showcasing unique challenges, creative problem-solving, and impact across different industries.",
+    images: ["https://mattwalkley.com/img-highlight-reel-cover.png"],
+  },
+};
 
 export default function DrawManagement() {
   const caseStudyData = getCaseStudyData(4);

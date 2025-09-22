@@ -5,6 +5,43 @@ import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
 import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
 import { getCaseStudyData } from "@/app/utils/caseStudyData";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Centralizing Draw Management | Matt Walkley",
+  description:
+    "How I redesigned a construction finance product's fragmented draw workflows into a unified, scalable system that improved efficiency across all loan types at Built Technologies.",
+  keywords: [
+    "product design",
+    "UX design",
+    "construction finance",
+    "draw management",
+    "Built Technologies",
+    "case study",
+  ],
+  openGraph: {
+    title: "Centralizing Draw Management | Matt Walkley",
+    description:
+      "How I redesigned a construction finance product's fragmented draw workflows into a unified, scalable system that improved efficiency across all loan types.",
+    type: "article",
+    url: "https://mattwalkley.com/case-studies/draw-management",
+    images: [
+      {
+        url: "https://mattwalkley.com/img-draw-desk-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Centralizing Draw Management - Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Centralizing Draw Management | Matt Walkley",
+    description:
+      "How I redesigned a construction finance product's fragmented draw workflows into a unified, scalable system.",
+    images: ["https://mattwalkley.com/img-draw-desk-cover.png"],
+  },
+};
 
 export default function DrawManagement() {
   const caseStudyData = getCaseStudyData(2);

@@ -5,6 +5,43 @@ import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
 import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
 import { getCaseStudyData } from "@/app/utils/caseStudyData";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Enterprise Platform Redesign | Matt Walkley",
+  description:
+    "Transforming Built's flagship CRE lending product—redesigning and replatforming a legacy system into a modern, scalable solution at Built Technologies.",
+  keywords: [
+    "product design",
+    "UX design",
+    "enterprise software",
+    "platform redesign",
+    "Built Technologies",
+    "case study",
+  ],
+  openGraph: {
+    title: "Enterprise Platform Redesign | Matt Walkley",
+    description:
+      "Transforming Built's flagship CRE lending product—redesigning and replatforming a legacy system into a modern, scalable solution.",
+    type: "article",
+    url: "https://mattwalkley.com/case-studies/enterprise-replatform",
+    images: [
+      {
+        url: "https://mattwalkley.com/img-replatform-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Enterprise Platform Redesign - Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise Platform Redesign | Matt Walkley",
+    description:
+      "Transforming Built's flagship CRE lending product—redesigning and replatforming a legacy system into a modern, scalable solution.",
+    images: ["https://mattwalkley.com/img-replatform-cover.png"],
+  },
+};
 
 export default function DrawManagement() {
   const caseStudyData = getCaseStudyData(1);

@@ -5,6 +5,43 @@ import GridBlock from "@/app/components/GridBlock";
 import CaseStudiesWrapper from "@/app/components/CaseStudiesWrapper";
 import RelatedCaseStudies from "@/app/components/RelatedCaseStudies";
 import { getCaseStudyData } from "@/app/utils/caseStudyData";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Timber Design System | Matt Walkley",
+  description:
+    "Creating a design system from the ground up—driving buy-in, building the team, and guiding implementation through adoption at Built Technologies.",
+  keywords: [
+    "design system",
+    "product design",
+    "UX design",
+    "design systems",
+    "Built Technologies",
+    "case study",
+  ],
+  openGraph: {
+    title: "Timber Design System | Matt Walkley",
+    description:
+      "Creating a design system from the ground up—driving buy-in, building the team, and guiding implementation through adoption.",
+    type: "article",
+    url: "https://mattwalkley.com/case-studies/design-system",
+    images: [
+      {
+        url: "https://mattwalkley.com/img-timber-cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Timber Design System - Case Study",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timber Design System | Matt Walkley",
+    description:
+      "Creating a design system from the ground up—driving buy-in, building the team, and guiding implementation through adoption.",
+    images: ["https://mattwalkley.com/img-timber-cover.png"],
+  },
+};
 
 export default function DrawManagement() {
   const caseStudyData = getCaseStudyData(3);

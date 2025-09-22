@@ -1,6 +1,33 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Matt Walkley",
+  description:
+    "Explore my design portfolio featuring product design, UX design, and design system work across startups and enterprise teams.",
+  keywords: [
+    "portfolio",
+    "product design",
+    "UX design",
+    "design work",
+    "Matt Walkley",
+  ],
+  openGraph: {
+    title: "Portfolio | Matt Walkley",
+    description:
+      "Explore my design portfolio featuring product design, UX design, and design system work across startups and enterprise teams.",
+    type: "website",
+    url: "https://mattwalkley.com/portfolio",
+  },
+  twitter: {
+    card: "summary",
+    title: "Portfolio | Matt Walkley",
+    description:
+      "Explore my design portfolio featuring product design, UX design, and design system work across startups and enterprise teams.",
+  },
+};
 
 const caseStudies = [
   {
