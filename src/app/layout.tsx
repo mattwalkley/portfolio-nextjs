@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,12 +40,18 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-BQGFEP3BM8');
+              gtag('config', 'G-BQGFEP3BM8', {
+                page_title: document.title,
+                page_location: window.location.href
+              });
             `,
           }}
         />
       </head>
-      <body className={inter.variable}>{children}</body>
+      <body className={inter.variable}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
