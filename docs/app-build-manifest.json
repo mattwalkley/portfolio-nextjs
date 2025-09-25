@@ -11,10 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/case-studies/design-system/page": [
+    "/case-studies/draw-management/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/case-studies/design-system/page.js"
+      "static/chunks/app/case-studies/draw-management/page.js"
+    ],
+    "/case-studies/enterprise-replatform/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/case-studies/enterprise-replatform/page.js"
     ]
   }
 }

@@ -244,6 +244,29 @@ export default function DrawManagement() {
               />
             </Grid>
           </div>
+
+          <div className="container container--wide container--highlight my-xl">
+            <Grid templateColumns="300px 1fr" gap="lg">
+              <div>
+                <h3 className="text-base mb-xs">Information architecture</h3>
+                <p className="text-sm text-gray my-sm">
+                  To satisfy the goal of reducing IA complexity, we collapsed
+                  multiple legacy pages into a single centralized hub. This
+                  simplified the user experience, made training and onboarding
+                  easier, and reduced the amount of code needed to support the
+                  different loan types and workflows.
+                </p>
+              </div>
+              <div className="case-study-image-block">
+                <img
+                  src="/img-draw-desk-ia.png"
+                  alt="Information architecture changes"
+                  className="case-study-image"
+                />
+              </div>
+            </Grid>
+          </div>
+
           <div className="container container--wide container--highlight my-xl">
             <Grid templateColumns="300px 1fr" gap="lg">
               <div>
@@ -256,12 +279,22 @@ export default function DrawManagement() {
                 </p>
               </div>
               <Grid templateColumns="1fr" gap="lg">
-                <div className="case-study-image-block mb-lg">
+                <div className="case-study-image-block mb-sm">
                   <img
                     src="/img-draw-desk.png"
                     alt="Draw Desk Interface"
                     className="case-study-image"
                   />
+                </div>
+                <div className="case-study-image-block mb-sm">
+                  <img
+                    src="/img-draw-desk-detail-panel.png"
+                    alt="Draw Desk Interface"
+                    className="case-study-image"
+                  />
+                  <p className="text-caption text-gray">
+                    Detail panel appearing when a draw is selected.
+                  </p>
                 </div>
                 <div className="case-study-image-block">
                   <img
@@ -318,27 +351,6 @@ export default function DrawManagement() {
                 <img
                   src="/img-saved-views.png"
                   alt="Saved views selector"
-                  className="case-study-image"
-                />
-              </div>
-            </Grid>
-          </div>
-          <div className="container container--wide container--highlight my-xl">
-            <Grid templateColumns="300px 1fr" gap="lg">
-              <div>
-                <h3 className="text-base mb-xs">Information architecture</h3>
-                <p className="text-sm text-gray my-sm">
-                  To satisfy the goal of reducing IA complexity, we collapsed
-                  multiple legacy pages into a single centralized hub. This
-                  simplified the user experience, made training and onboarding
-                  easier, and reduced the amount of code needed to support the
-                  different loan types and workflows.
-                </p>
-              </div>
-              <div className="case-study-image-block">
-                <img
-                  src="/img-draw-desk-ia.png"
-                  alt="Information architecture changes"
                   className="case-study-image"
                 />
               </div>
