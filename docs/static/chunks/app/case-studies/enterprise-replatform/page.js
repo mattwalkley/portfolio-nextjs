@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["app/case-studies/design-system/page"],{
+(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["app/case-studies/enterprise-replatform/page"],{
 
 /***/ "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%7B%22request%22%3A%22%2FUsers%2Fmatthewwalkley%2FProjects%2Fportfolio%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fapp-dir%2Flink.js%22%2C%22ids%22%3A%5B%22__esModule%22%2C%22default%22%5D%7D&modules=%7B%22request%22%3A%22%2FUsers%2Fmatthewwalkley%2FProjects%2Fportfolio%2Fsrc%2Fapp%2Fcomponents%2FCaseStudiesWrapper.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&modules=%7B%22request%22%3A%22%2FUsers%2Fmatthewwalkley%2FProjects%2Fportfolio%2Fsrc%2Fapp%2Fcomponents%2FNavigation.tsx%22%2C%22ids%22%3A%5B%22default%22%5D%7D&server=false!":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
