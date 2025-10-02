@@ -10,7 +10,7 @@
   --color-darker: hsl(213, 15%, 20%);
   --color-white: #ffffff;
   --color-gray: #d5d7d9;
-  --color-link: rgba(0, 235, 248, 1);
+  --color-link: #00ebf8;
 
   /* Typography */
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
